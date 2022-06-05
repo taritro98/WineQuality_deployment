@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+  <div class="login">
+    <h1>Red Wine Quality Prediction</h1>
+
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="fixed acidity" placeholder="fixed acidity" required="required" value="7.4" />
+      <input type="text" name="volatile acidity" placeholder="volatile acidity" required="required" value="0.7" />
+      <input type="text" name="citric acid" placeholder="citric acid" required="required" value="0.0" />
+      <input type="text" name="residual sugar" placeholder="residual sugar" required="required" value="1.9" />
+      <input type="text" name="chlorides" placeholder="chlorides" required="required" value="0.076" />
+      <input type="text" name="free sulfur dioxide" placeholder="free sulfur dioxide" required="required"
+        value="11.0" />
+      <input type="text" name="total sulfur dioxide" placeholder="total sulfur dioxide" required="required"
+        value="34.0" />
+      <input type="text" name="density" placeholder="density" required="required" value="0.9978" />
+      <input type="text" name="pH" placeholder="pH" required="required" value="3.51" />
+      <input type="text" name="sulphates" placeholder="sulphates" required="required" value="0.56" />
+      <input type="text" name="alcohol" placeholder="alcohol" required="required" value="9.4" />
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    <div class="prediction-text">
+      {{ prediction_text }}
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>

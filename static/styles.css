@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body { background:rgb(30,30,40); }
+form { max-width:420px; margin:50px auto; }
+
+.header {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+.div {
+    margin-bottom: 8px;
+}
+.input-label {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: white;
+    display: inline-block;
+    text-align: left;
+    padding-right: 10px;
+    font-size: 18px;
+    width: 180px;
+}
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 16px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 90%;
+  background:#CC6666;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; }
+
+.prediction-text {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-right: 25px;
+    margin-top: -10px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+<div class="header">
+  <h1>Red Wine Quality Prediction</h1>
+</div>
+
+<form action="{{ url_for('predict')}}" method="post">
+  <div>
+      <label for="fixed acidity" class="input-label">Fixed Acidity</label>
+      <input type="text" class="feedback-input" name="fixed acidity" placeholder="fixed acidity" required="required"
+        value="7.4" />
+    </div>
+    <div>
+      <label for="volatile acidity" class="input-label">Volatile Acidity</label>
+      <input type="text" class="feedback-input" name="volatile acidity" placeholder="volatile acidity"
+        required="required" value="0.7" />
+    </div>
+    <div>
+      <label for="citric acid" class="input-label">Citrid Acid</label>
+      <input type="text" class="feedback-input" name="citric acid" placeholder="citric acid" required="required"
+        value="0.0" />
+    </div>
+
+    <div>
+      <label for="residual sugar" class="input-label">Residual Sugar</label>
+      <input type="text" class="feedback-input" name="residual sugar" placeholder="residual sugar" required="required"
+        value="1.9" />
+    </div>
+
+    <div>
+      <label for="chlorides" class="input-label">Chlorides</label>
+      <input type="text" class="feedback-input" name="chlorides" placeholder="chlorides" required="required"
+        value="0.076" />
+    </div>
+
+    <div>
+      <label for="free sulfur dioxide" class="input-label">Free Sulfur Dioxide</label>
+      <input type="text" class="feedback-input" name="free sulfur dioxide" placeholder="free sulfur dioxide"
+        required="required" value="11.0" />
+    </div>
+    <div>
+      <label for="total sulfur dioxide" class="input-label">Total Sulfur Dioxide</label>
+      <input type="text" class="feedback-input" name="total sulfur dioxide" placeholder="total sulfur dioxide"
+        required="required" value="34.0" />
+    </div>
+
+    <div>
+      <label for="density" class="input-label">Density</label>
+      <input type="text" class="feedback-input" name="density" placeholder="density" required="required"
+        value="0.9978" />
+    </div>
+
+    <div>
+      <label for="pH" class="input-label">pH</label>
+      <input type="text" class="feedback-input" name="pH" placeholder="pH" required="required" value="3.51" />
+    </div>
+    <div>
+      <label for="sulphates" class="input-label">Sulphates</label>
+      <input type="text" class="feedback-input" name="sulphates" placeholder="sulphates" required="required"
+        value="0.56" />
+    </div>
+
+    <div>
+      <label for="alcohol" class="input-label">Alcohol</label>
+      <input type="text" class="feedback-input" name="alcohol" placeholder="alcohol" required="required" value="9.4" />
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+  </form>
+
+  <div class="prediction-text">
+    {{ prediction_text }}
+  </div>
+
+</body>
+
+</html>
